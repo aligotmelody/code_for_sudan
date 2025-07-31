@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trood - Carrier Dashboard</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+    <link
+    href="trood-ico.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
+  />
+    <link href="/carrier_style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: [
+            "Questrial:regular",
+            "DM Sans:regular,700",
+            "DM Serif Display:regular",
+          ],
+        },
+      });
+    </script>
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   
+</head>
+<body>
+    <div class="container">
+        <!-- =============== Navigation ================ -->
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="rocket-outline"></ion-icon>
+                        </span>
+                        <span class="title">Trood</span>
+                    </a>
+                </li>
+               
+                <li class="active">
+                    <a href="/carrier-ongoing-delivery">
+                        <span class="icon">
+                            <ion-icon name="cube-outline"></ion-icon>
+                        </span>
+                        <span class="title">Ongoing Deliveries</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/carrier-delivery-history">
+                        <span class="icon">
+                            <ion-icon name="time-outline"></ion-icon>
+                        </span>
+                        <span class="title">Delivery History</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/carrier-profile">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="title">My Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search deliveries...">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <div class="user">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carrier">
+                </div>
+            </div>
+
+
+
+<div class="tabContent active" id="ongoing">
+    <div class="deliveryHeader">
+        <div>
+            <h2>Ongoing Delivery</h2>
+            <div class="packageId">Package ID: PKG-789456123</div>
+        </div>
+        <div class="estimatedTime">
+            <ion-icon name="time-outline"></ion-icon>
+            <span>Estimated Delivery: Today, 10:00 AM</span>
+        </div>
+    </div>
+
+    <div class="deliveryDetails">
+        <div class="packageInfo">
+            <div class="infoGroup">
+                <h3>Package Details</h3>
+                <div class="infoItem">
+                    <div class="infoLabel">Contents:</div>
+                    <div class="infoValue">Electronics (Tablet, Charger)</div>
+                </div>
+                <div class="infoItem">
+                    <div class="infoLabel">Weight:</div>
+                    <div class="infoValue">1.2 kg</div>
+                </div>
+                <div class="infoItem">
+                    <div class="infoLabel">Dimensions:</div>
+                    <div class="infoValue">25 x 18 x 3 cm</div>
+                </div>
+                <div class="infoItem">
+                    <div class="infoLabel">  Instructions: </div>
+                    <div class="infoValue"> Fragile. Handle with care. Signature required.</div>
+                </div>
+            </div>
+            <div class="infoGroup">
+                <h3>Delivery Address</h3>
+                <div class="infoItem">
+                    <div class="infoLabel">Recipient:</div>
+                    <div class="infoValue">Emma Thompson</div>
+                </div>
+                <div class="infoItem">
+                    <div class="infoLabel">Address:</div>
+                    <div class="infoValue">123 Main Street, Apt 4B</div>
+                </div>
+                <div class="infoItem">
+                    <div class="infoLabel">City, State:</div>
+                    <div class="infoValue">Boston, MA</div>
+                </div>
+                <div class="infoItem">
+                    <div class="infoLabel">Postal Code:</div>
+                    <div class="infoValue">02101</div>
+                </div>
+                <div class="infoItem">
+                    <div class="infoLabel">Phone:</div>
+                    <div class="infoValue">(555) 123-4567</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="customerInfo">
+            <div class="infoGroup">
+                <h3>Customer Information</h3>
+                <div class="infoItem">
+                    <div class="infoLabel">Name:</div>
+                    <div class="infoValue">Emma Thompson</div>
+                </div>
+                <div class="infoItem">
+                    <div class="infoLabel">Email:</div>
+                    <div class="infoValue">emma.thompson@example.com</div>
+                </div>
+                <div class="infoItem">
+                    <div class="infoLabel">Phone:</div>
+                    <div class="infoValue">(555) 123-4567</div>
+                </div>
+            </div>
+            <div class="infoGroup">
+                <h3>Delivery Progress</h3>
+                <div class="infoItem">
+                    <div class="infoLabel">Status:</div>
+                    <div class="infoValue"><span class="status inProgress">Near Delivery Location</span></div>
+                </div>
+                <div class="infoItem">
+                    <div class="infoLabel">Last Update:</div>
+                    <div class="infoValue">Just now</div>
+                </div>
+            </div>
+            <button class="notifyBtn" id="notifyCustomerBtn">
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                Notify Customer - Delivered
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+const notifyBtn = document.getElementById('notifyCustomerBtn');
+        if (notifyBtn) {
+            notifyBtn.addEventListener('click', function() {
+                // Basic example: Disable button and change text
+                this.disabled = true;
+                this.innerHTML = '<ion-icon name="checkmark-done-outline"></ion-icon> Notification Sent';
+                // In a real app, you would send an API request here
+                console.log("Notification sent to customer for package PKG-789456123");
+            });
+        }
+</script>
