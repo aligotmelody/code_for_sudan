@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trood - Carrier Dashboard</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+    <link
+    href="trood-ico.ico"
+    rel="shortcut icon"
+    type="image/x-icon"
+  />
+    <link href="/carrier_style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: [
+            "Questrial:regular",
+            "DM Sans:regular,700",
+            "DM Serif Display:regular",
+          ],
+        },
+      });
+    </script>
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   
+</head>
+<body>
+    <div class="container">
+        <!-- =============== Navigation ================ -->
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="/">
+                        <span class="icon">
+                            <ion-icon name="rocket-outline"></ion-icon>
+                        </span>
+                        <span class="title">Trood</span>
+                    </a>
+                </li>
+                <li class="active"> <!-- Active class for Dashboard/Overview -->
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="cube-outline"></ion-icon>
+                        </span>
+                        <span class="title">My Deliveries</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="time-outline"></ion-icon>
+                        </span>
+                        <span class="title">Delivery History</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="title">My Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Messages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search deliveries...">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <div class="user">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carrier">
+                </div>
+            </div>
+
+            <!-- ======================= Carrier Tabs ================== -->
+            <div class="tabs">
+                <div class="tab active" data-tab="ongoing">Ongoing Delivery</div>
+                <div class="tab" data-tab="history">Delivery History</div>
+                <div class="tab" data-tab="profile">My Profile</div>
+            </div>
+
+            <!-- ======================= Tab Content ================== -->
+
+            <!-- Ongoing Delivery Tab Content -->
+            <div class="tabContent active" id="ongoing">
+                <div class="deliveryHeader">
+                    <div>
+                        <h2>Ongoing Delivery</h2>
+                        <div class="packageId">Package ID: PKG-789456123</div>
+                    </div>
+                    <div class="estimatedTime">
+                        <ion-icon name="time-outline"></ion-icon>
+                        <span>Estimated Delivery: Today, 10:00 AM</span>
+                    </div>
+                </div>
+
+                <div class="deliveryDetails">
+                    <div class="packageInfo">
+                        <div class="infoGroup">
+                            <h3>Package Details</h3>
+                            <div class="infoItem">
+                                <div class="infoLabel">Contents:</div>
+                                <div class="infoValue">Electronics (Tablet, Charger)</div>
+                            </div>
+                            <div class="infoItem">
+                                <div class="infoLabel">Weight:</div>
+                                <div class="infoValue">1.2 kg</div>
+                            </div>
+                            <div class="infoItem">
+                                <div class="infoLabel">Dimensions:</div>
+                                <div class="infoValue">25 x 18 x 3 cm</div>
+                            </div>
+                            <div class="infoItem">
+                                <div class="infoLabel">Special Instructions:</div>
+                                <div class="infoValue">Fragile. Handle with care. Signature required.</div>
+                            </div>
+                        </div>
+                        <div class="infoGroup">
+                            <h3>Delivery Address</h3>
+                            <div class="infoItem">
+                                <div class="infoLabel">Recipient:</div>
+                                <div class="infoValue">Emma Thompson</div>
+                            </div>
+                            <div class="infoItem">
+                                <div class="infoLabel">Address:</div>
+                                <div class="infoValue">123 Main Street, Apt 4B</div>
+                            </div>
+                            <div class="infoItem">
+                                <div class="infoLabel">City, State:</div>
+                                <div class="infoValue">Boston, MA</div>
+                            </div>
+                            <div class="infoItem">
+                                <div class="infoLabel">Postal Code:</div>
+                                <div class="infoValue">02101</div>
+                            </div>
+                            <div class="infoItem">
+                                <div class="infoLabel">Phone:</div>
+                                <div class="infoValue">(555) 123-4567</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="customerInfo">
+                        <div class="infoGroup">
+                            <h3>Customer Information</h3>
+                            <div class="infoItem">
+                                <div class="infoLabel">Name:</div>
+                                <div class="infoValue">Emma Thompson</div>
+                            </div>
+                            <div class="infoItem">
+                                <div class="infoLabel">Email:</div>
+                                <div class="infoValue">emma.thompson@example.com</div>
+                            </div>
+                            <div class="infoItem">
+                                <div class="infoLabel">Phone:</div>
+                                <div class="infoValue">(555) 123-4567</div>
+                            </div>
+                        </div>
+                        <div class="infoGroup">
+                            <h3>Delivery Progress</h3>
+                            <div class="infoItem">
+                                <div class="infoLabel">Status:</div>
+                                <div class="infoValue"><span class="status inProgress">Near Delivery Location</span></div>
+                            </div>
+                            <div class="infoItem">
+                                <div class="infoLabel">Last Update:</div>
+                                <div class="infoValue">Just now</div>
+                            </div>
+                        </div>
+                        <button class="notifyBtn" id="notifyCustomerBtn">
+                            <ion-icon name="checkmark-circle-outline"></ion-icon>
+                            Notify Customer - Delivered
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Delivery History Tab Content -->
+            <div class="tabContent" id="history">
+                <div class="historyHeader">
+                    <h2>Delivery History</h2>
+                </div>
+                <div class="historyTableContainer">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Package ID</td>
+                                <td>Date</td>
+                                <td>Destination</td>
+                                <td>Recipient</td>
+                                <td>Rating</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PKG-111222333</td>
+                                <td>Apr 10, 2024</td>
+                                <td>Los Angeles, CA</td>
+                                <td>James Wilson</td>
+                                <td>
+                                    <div class="ratingStars">
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <span class="ratingValue">5.0</span>
+                                    </div>
+                                </td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>PKG-444555666</td>
+                                <td>Apr 08, 2024</td>
+                                <td>Chicago, IL</td>
+                                <td>Olivia Garcia</td>
+                                <td>
+                                    <div class="ratingStars">
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star-half-outline"></ion-icon>
+                                        <span class="ratingValue">4.5</span>
+                                    </div>
+                                </td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>PKG-777888999</td>
+                                <td>Apr 05, 2024</td>
+                                <td>Miami, FL</td>
+                                <td>Liam Miller</td>
+                                <td>
+                                    <div class="ratingStars">
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star-outline"></ion-icon>
+                                        <span class="ratingValue">4.0</span>
+                                    </div>
+                                </td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>PKG-101010101</td>
+                                <td>Apr 02, 2024</td>
+                                <td>Seattle, WA</td>
+                                <td>Sophia Davis</td>
+                                <td>
+                                    <div class="ratingStars">
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <span class="ratingValue">5.0</span>
+                                    </div>
+                                </td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>PKG-202020202</td>
+                                <td>Mar 28, 2024</td>
+                                <td>Boston, MA</td>
+                                <td>Noah Rodriguez</td>
+                                <td>
+                                    <div class="ratingStars">
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star-half-outline"></ion-icon>
+                                        <ion-icon name="star-outline"></ion-icon>
+                                        <span class="ratingValue">3.5</span>
+                                    </div>
+                                </td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>PKG-303030303</td>
+                                <td>Mar 25, 2024</td>
+                                <td>Austin, TX</td>
+                                <td>Ava Martinez</td>
+                                <td>
+                                    <div class="ratingStars">
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <ion-icon name="star"></ion-icon>
+                                        <span class="ratingValue">5.0</span>
+                                    </div>
+                                </td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Profile Tab Content -->
+            <div class="tabContent" id="profile">
+                <div class="profileHeader">
+                    <div class="profileImgBx">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Johnson">
+                    </div>
+                    <div class="profileName">
+                        <h2>Michael Johnson</h2>
+                        <p>Carrier ID: CRR-001</p>
+                    </div>
+                </div>
+
+                <div class="profileStats">
+                    <div class="statCard">
+                        <div class="statValue">4.7</div>
+                        <div class="statLabel">Average Rating</div>
+                    </div>
+                    <div class="statCard">
+                        <div class="statValue">1,248</div>
+                        <div class="statLabel">Total Deliveries</div>
+                    </div>
+                    <div class="statCard">
+                        <div class="statValue">5+</div>
+                        <div class="statLabel">Years Experience</div>
+                    </div>
+                    <div class="statCard">
+                        <div class="statValue">98%</div>
+                        <div class="statLabel">On-Time Rate</div>
+                    </div>
+                </div>
+
+                <div class="profileDetails">
+                    <h3>Personal Information</h3>
+                    <div class="profileInfoGroup">
+                        <div class="profileInfoItem">
+                            <div class="profileInfoLabel">Full Name</div>
+                            <div class="profileInfoValue">Michael Johnson</div>
+                        </div>
+                        <div class="profileInfoItem">
+                            <div class="profileInfoLabel">Email</div>
+                            <div class="profileInfoValue">michael.johnson@Trood.com</div>
+                        </div>
+                        <div class="profileInfoItem">
+                            <div class="profileInfoLabel">Phone Number</div>
+                            <div class="profileInfoValue">(555) 987-6543</div>
+                        </div>
+                        <div class="profileInfoItem">
+                            <div class="profileInfoLabel">Assigned Vehicle</div>
+                            <div class="profileInfoValue">Van - XYZ 123</div>
+                        </div>
+                        <div class="profileInfoItem">
+                            <div class="profileInfoLabel">Service Area</div>
+                            <div class="profileInfoValue">Boston Metro Area</div>
+                        </div>
+                        <div class="profileInfoItem">
+                            <div class="profileInfoLabel">Status</div>
+                            <div class="profileInfoValue"><span class="status inProgress">On Delivery</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- =========== Scripts =========  -->
+    <script>
+        // Toggle navigation for mobile
+        document.querySelector('.toggle').addEventListener('click', function() {
+            document.querySelector('.navigation').classList.toggle('active');
+        });
+        // Add active class to navigation items (optional, can be handled server-side)
+        const navItems = document.querySelectorAll('.navigation ul li');
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                navItems.forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Tab switching logic
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tabContent');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and contents
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+
+                // Add active class to clicked tab
+                tab.classList.add('active');
+
+                // Show the corresponding content
+                const tabId = tab.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Notify Customer Button Logic
+        const notifyBtn = document.getElementById('notifyCustomerBtn');
+        if (notifyBtn) {
+            notifyBtn.addEventListener('click', function() {
+                // Basic example: Disable button and change text
+                this.disabled = true;
+                this.innerHTML = '<ion-icon name="checkmark-done-outline"></ion-icon> Notification Sent';
+                // In a real app, you would send an API request here
+                console.log("Notification sent to customer for package PKG-789456123");
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+ <!-- =========== Scripts =========  -->
+ <script>
+    // Toggle navigation for mobile
+    document.querySelector('.toggle').addEventListener('click', function() {
+        document.querySelector('.navigation').classList.toggle('active');
+    });
+
+    // Add active class to navigation items
+    const navItems = document.querySelectorAll('.navigation ul li');
+    navItems.forEach(item => {
+        item.addEventListener('click', function() {
+            navItems.forEach(i => i.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+</script>
+
+<!-- ====== ionicons ======= -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

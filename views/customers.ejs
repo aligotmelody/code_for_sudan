@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/header', { title: 'Dashboard' }) %>
+<body>
+    <div class="container">
+        <!-- =============== Navigation ================ -->
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="/">
+                        <span class="icon">
+                            <ion-icon name="rocket-outline"></ion-icon>
+                        </span>
+                        <span class="title">Trood</span>
+                    </a>
+                </li>
+                <li >
+                    <a href="/">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="/customers">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Customers</span>
+                    </a>
+                </li>
+
+              
+
+                <li>
+                    <a href="/carriers">
+                        <span class="icon">
+                            <ion-icon name="car-outline"></ion-icon>
+                        </span>
+                        <span class="title">Carriers</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/service-centers">
+                        <span class="icon">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </span>
+                        <span class="title">Service Centers</span>
+                    </a>
+                </li>
+             
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <%- include('partials/topbar') %>
+
+            <!-- ======================= Customers Content ================== -->
+            <div class="customerHeader">
+                <h2>Customer List</h2>
+                <button class="addCustomerBtn">
+                    <ion-icon name="add-outline"></ion-icon>
+                    <span>Add New Customer</span>
+                </button>
+            </div>
+
+            <div class="customerTableContainer">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Customer</td>
+                            <td>Email</td>
+                            <td>Phone</td>
+                            <td>Location</td>
+                            <td>Join Date</td>
+                            <td>Actions</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="customerName">
+                                    <div class="imgBxSmall"><img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Emma Thompson"></div>
+                                    <div class="customerDetails">
+                                        <h4>Emma Thompson</h4>
+                                        <p>ID: CUS-001</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>emma.thompson@example.com</td>
+                            <td>(555) 123-4567</td>
+                            <td>Madani</td>
+                            <td>2023-01-15</td>
+                            <td>
+                                <a href="#" class="actionBtn viewBtn">View</a>
+                                <a href="#" class="actionBtn editBtn">Edit</a>
+                                <a href="#" class="actionBtn deleteBtn">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="customerName">
+                                    <div class="imgBxSmall"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James Wilson"></div>
+                                    <div class="customerDetails">
+                                        <h4>James Wilson</h4>
+                                        <p>ID: CUS-002</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>james.wilson@example.com</td>
+                            <td>(555) 987-6543</td>
+                            <td>Khartoum, Bahari</td>
+                            <td>2023-02-28</td>
+                            <td>
+                                <a href="#" class="actionBtn viewBtn">View</a>
+                                <a href="#" class="actionBtn editBtn">Edit</a>
+                                <a href="#" class="actionBtn deleteBtn">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="customerName">
+                                    <div class="imgBxSmall"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Olivia Garcia"></div>
+                                    <div class="customerDetails">
+                                        <h4>Olivia Garcia</h4>
+                                        <p>ID: CUS-003</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>olivia.garcia@example.com</td>
+                            <td>(555) 456-7890</td>
+                            <td>Madani</td>
+                            <td>2023-04-10</td>
+                            <td>
+                                <a href="#" class="actionBtn viewBtn">View</a>
+                                <a href="#" class="actionBtn editBtn">Edit</a>
+                                <a href="#" class="actionBtn deleteBtn">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                             <td>
+                                <div class="customerName">
+                                    <div class="imgBxSmall"><img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Liam Miller"></div>
+                                    <div class="customerDetails">
+                                        <h4>Liam Miller</h4>
+                                        <p>ID: CUS-004</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>liam.miller@example.com</td>
+                            <td>(555) 234-5678</td>
+                            <td>PortSudan</td>
+                            <td>2023-05-22</td>
+                            <td>
+                                <a href="#" class="actionBtn viewBtn">View</a>
+                                <a href="#" class="actionBtn editBtn">Edit</a>
+                                <a href="#" class="actionBtn deleteBtn">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                             <td>
+                                <div class="customerName">
+                                    <div class="imgBxSmall"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sophia Davis"></div>
+                                    <div class="customerDetails">
+                                        <h4>Sophia Davis</h4>
+                                        <p>ID: CUS-005</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>sophia.davis@example.com</td>
+                            <td>(555) 876-5432</td>
+                            <td>Kosty</td>
+                            <td>2023-07-01</td>
+                            <td>
+                                <a href="#" class="actionBtn viewBtn">View</a>
+                                <a href="#" class="actionBtn editBtn">Edit</a>
+                                <a href="#" class="actionBtn deleteBtn">Delete</a>
+                            </td>
+                        </tr>
+                         <tr>
+                             <td>
+                                <div class="customerName">
+                                    <div class="imgBxSmall"><img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Noah Rodriguez"></div>
+                                    <div class="customerDetails">
+                                        <h4>Noah Rodriguez</h4>
+                                        <p>ID: CUS-006</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>noah.rodriguez@example.com</td>
+                            <td>(555) 345-6789</td>
+                            <td>Khartoum, Jabra</td>
+                            <td>2023-08-19</td>
+                            <td>
+                                <a href="#" class="actionBtn viewBtn">View</a>
+                                <a href="#" class="actionBtn editBtn">Edit</a>
+                                <a href="#" class="actionBtn deleteBtn">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <%- include('partials/footer') %>
+</body>
+</html>
