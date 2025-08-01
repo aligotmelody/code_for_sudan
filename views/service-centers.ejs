@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trood Admin Dashboard</title>
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+        <link href="./Service_center_style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+        <script type="text/javascript">
+          WebFont.load({
+            google: {
+              families: [
+                "Questrial:regular",
+                "DM Sans:regular,700",
+                "DM Serif Display:regular",
+              ],
+            },
+          });
+        </script>
+        
+    </head>
+
+
+<body>
+    <div class="container">
+        <!-- =============== Navigation ================ -->
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="/">
+                        <span class="icon">
+                            <ion-icon name="rocket-outline"></ion-icon>
+                        </span>
+                        <span class="title">Trood</span>
+                    </a>
+                </li>
+                <li >
+                    <a href="/dahsboard">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/customers">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Customers</span>
+                    </a>
+                </li>
+
+            
+
+                <li>
+                    <a href="/carriers">
+                        <span class="icon">
+                            <ion-icon name="car-outline"></ion-icon>
+                        </span>
+                        <span class="title">Carriers</span>
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="/service-centers">
+                        <span class="icon">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </span>
+                        <span class="title">Service Centers</span>
+                    </a>
+                </li>
+              
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <%- include('partials/topbar') %>
+
+            <!-- ======================= Service Centers Content ================== -->
+            <!-- Center Overview Cards -->
+            <div class="centerOverview">
+                <div class="overviewCard">
+                    <div>
+                        <div class="cardTitle">Total Centers</div>
+                        <h3 class="cardValue">124</h3>
+                    </div>
+                    <ion-icon name="business-outline" class="cardIcon"></ion-icon>
+                </div>
+                <div class="overviewCard">
+                    <div>
+                        <div class="cardTitle">Regional Coverage</div>
+                        <h3 class="cardValue">87 Cities</h3>
+                    </div>
+                     <ion-icon name="map-outline" class="cardIcon"></ion-icon>
+                </div>
+                <div class="overviewCard">
+                    <div>
+                        <div class="cardTitle">Avg. Processing Time</div>
+                        <h3 class="cardValue">2.4 hrs</h3>
+                    </div>
+                    <ion-icon name="time-outline" class="cardIcon"></ion-icon>
+                </div>
+                <div class="overviewCard">
+                    <div>
+                        <div class="cardTitle">Facility Capacity</div>
+                        <h3 class="cardValue">15,000/day</h3>
+                    </div>
+                    <ion-icon name="cube-outline" class="cardIcon"></ion-icon>
+                </div>
+            </div>
+
+            <!-- Search & Filters Section -->
+            <div class="filterSection">
+                <div class="filterHeader">
+                    <h2>Filters</h2>
+                </div>
+                <div class="filterControls">
+                    <div class="filterGroup">
+                        <label for="filterRegion">Region</label>
+                        <select id="filterRegion">
+                            <option value="">All Regions</option>
+                            <option value="north">Khartoum</option>
+                            <option value="south">Port Sudan</option>
+                            <option value="east">Madani</option>
+                            <option value="west">Kosty</option>
+                        </select>
+                    </div>
+                    <div class="filterGroup">
+                        <label for="filterStatus">Status</label>
+                        <select id="filterStatus">
+                            <option value="">All Statuses</option>
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                            <option value="maintenance">Maintenance</option>
+                        </select>
+                    </div>
+                   
+                    <!-- Example of an input filter -->
+                    <!--
+                    <div class="filterGroup">
+                        <label for="filterCapacity">Min Capacity</label>
+                        <input type="number" id="filterCapacity" placeholder="e.g., 1000">
+                    </div>
+                    -->
+                </div>
+            </div>
+
+            <!-- Service Centers Table -->
+            <div class="centerTableContainer">
+                <div class="centerTableHeader">
+                    <h2>Service Center List</h2>
+                    <button class="btn">
+                        <ion-icon name="add-outline"></ion-icon>
+                        <span>Add New Center</span>
+                    </button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Center</td>
+                            <td>Location</td>
+                            <td>Manager</td>
+                            <td>Capacity (Daily)</td>
+                            <td>Status</td>
+                            <td>Actions</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="centerName">
+                                    <div class="imgBxSmall"><ion-icon name="business-outline"></ion-icon></div>
+                                    <div class="centerDetails">
+                                        <h4>Central Hub NYC</h4>
+                                        <p>ID: SC-001</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Khartoum, OM Dor</td>
+                            <td>Alice Johnson</td>
+                            <td>2,500</td>
+                            <td><span class="status active">Active</span></td>
+                            <td>
+                                <a href="#" class="actionBtn viewBtn">View</a>
+                                <a href="#" class="actionBtn editBtn">Edit</a>
+                                <a href="#" class="actionBtn deleteBtn">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="centerName">
+                                    <div class="imgBxSmall"><ion-icon name="business-outline"></ion-icon></div>
+                                    <div class="centerDetails">
+                                        <h4>West Coast Logistics</h4>
+                                        <p>ID: SC-002</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Khartoum, Jabra</td>
+                            <td>Robert Chen</td>
+                            <td>3,200</td>
+                            <td><span class="status maintenance">Maintenance</span></td>
+                            <td>
+                                <a href="#" class="actionBtn viewBtn">View</a>
+                                <a href="#" class="actionBtn editBtn">Edit</a>
+                                <a href="#" class="actionBtn deleteBtn">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="centerName">
+                                    <div class="imgBxSmall"><ion-icon name="business-outline"></ion-icon></div>
+                                    <div class="centerDetails">
+                                        <h4>Midwest Sorting</h4>
+                                        <p>ID: SC-003</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Kosty</td>
+                            <td>Emily Davis</td>
+                            <td>1,800</td>
+                            <td><span class="status active">Active</span></td>
+                            <td>
+                                <a href="#" class="actionBtn viewBtn">View</a>
+                                <a href="#" class="actionBtn editBtn">Edit</a>
+                                <a href="#" class="actionBtn deleteBtn">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                             <td>
+                                <div class="centerName">
+                                    <div class="imgBxSmall"><ion-icon name="business-outline"></ion-icon></div>
+                                    <div class="centerDetails">
+                                        <h4>Southern Distribution</h4>
+                                        <p>ID: SC-004</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Madani</td>
+                            <td>Michael Brown</td>
+                            <td>2,000</td>
+                            <td><span class="status inactive">Inactive</span></td>
+                            <td>
+                                <a href="#" class="actionBtn viewBtn">View</a>
+                                <a href="#" class="actionBtn editBtn">Edit</a>
+                                <a href="#" class="actionBtn deleteBtn">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                             <td>
+                                <div class="centerName">
+                                    <div class="imgBxSmall"><ion-icon name="business-outline"></ion-icon></div>
+                                    <div class="centerDetails">
+                                        <h4>Pacific Northwest</h4>
+                                        <p>ID: SC-005</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Khartoum, Bahari</td>
+                            <td>Sarah Wilson</td>
+                            <td>1,500</td>
+                            <td><span class="status active">Active</span></td>
+                            <td>
+                                <a href="#" class="actionBtn viewBtn">View</a>
+                                <a href="#" class="actionBtn editBtn">Edit</a>
+                                <a href="#" class="actionBtn deleteBtn">Delete</a>
+                            </td>
+                        </tr>
+                         <tr>
+                             <td>
+                                <div class="centerName">
+                                    <div class="imgBxSmall"><ion-icon name="business-outline"></ion-icon></div>
+                                    <div class="centerDetails">
+                                        <h4>New England Hub</h4>
+                                        <p>ID: SC-006</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>PortSudan</td>
+                            <td>David Miller</td>
+                            <td>1,200</td>
+                            <td><span class="status active">Active</span></td>
+                            <td>
+                                <a href="#" class="actionBtn viewBtn">View</a>
+                                <a href="#" class="actionBtn editBtn">Edit</a>
+                                <a href="#" class="actionBtn deleteBtn">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <%- include('partials/footer') %>
+</body>
+</html>
